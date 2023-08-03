@@ -18,6 +18,8 @@ dao.getProductByReference = async(reference) => await productQueries.getProductB
 
 dao.addOrder = async(orderData) =>  await orderQueries.addOrder(orderData)
 dao.addRProductOrder = async(rProductOrderData) =>  await orderQueries.addRProductOrder(rProductOrderData)
+dao.getClientById = async(id) =>  await orderQueries.getClientById(id)
+dao.getOrderByReference = async(reference) => await orderQueries.getOrderByReference(reference)
 
 
 module.exports = dao;

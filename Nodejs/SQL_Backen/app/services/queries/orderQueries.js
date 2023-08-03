@@ -46,6 +46,30 @@ orderQueries.addRProductOrder = async (rProductOrderData) => {
 }
 
 
+orderQueries.getClientById = async (id) => {
+    let conn = null
+    try {
+        conn = await db.createConnection()
+        return await db.query('select * from orders where idClient=?',id, 'select', conn)
+    } catch (err) {
+        throw new Error(e)
+    } finally {
+        conn && await conn.end();
+    }
+}
+
+orderQueries.getOrderByReference = async (reference) => {
+    let conn = null
+    try {
+        conn = await db.createConnection()
+        return await db.query('select * from products where reference=?',reference, 'select', conn)
+    } catch (err) {
+        throw new Error(e)
+    } finally {
+        conn && await conn.end();
+    }
+}
+
 
 
 module.exports = orderQueries

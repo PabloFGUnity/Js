@@ -44,4 +44,30 @@ orderController.addOrder = async (req, res) => {
     }
 }
 
+orderController.getOrder = async (req, res) => {
+
+    const {id} = req.params
+    
+    try {
+        const userOrder = await dao.getClientById(id)
+
+        if (userOrder.length === 0) return res.sendStatus(404)
+        
+        let result = [];
+
+        for (const order of userOrder ) {
+            let [product] = await dao.getOrderByReference(order.product)
+
+            result.push({...order, product})
+        }
+
+        console.log(result);
+        return res.status(200).send(result)
+
+    } catch (e) {
+        console.log(e.message)
+        return res.sendStatus(500)
+    }
+}
+
 module.exports = orderController;
