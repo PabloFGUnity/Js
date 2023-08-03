@@ -1,0 +1,6 @@
+{
+  "title": "Bienvenido a React y react-i18next, <strong>{{name}}</strong>",
+  "message": "<strong>Este es el distintivo numero 1:</strong> <0>{{somethingInsideBadge}}</0> <i>y el distintivo numero 2:</i> <1>{{somethingElseInsideBadge}}</1>",
+  "badge": "Algun valor dentro del distintivo, {{name}}",
+  "badge2": "Algun otro valor dentro del distintivo"
+}

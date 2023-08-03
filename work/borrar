@@ -1,0 +1,31 @@
+let matriz = ["2", "45", "89", "32"];
+function filtro(array, callback) {
+  let matriz1 = [];
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i], i, array)) {
+      matriz1.push(array[i]);
+    }
+  }
+  return matriz1;
+}
+const result = filtro(matriz, (item) => item < 80);
+console.log(result);
+
+console.log(matriz.filter((item, index, array) => item < 80));
+
+function Coche(marca, modelo) {
+  this.marca = marca;
+  this.modelo = modelo;
+  this.acelerar = function () {
+    console.log("acelerando");
+    return "acelerar";
+  };
+  this.frenar = function () {
+    console.log("frenando");
+  };
+}
+const renault21 = new Coche("renault", "21");
+const renault12 = new Coche("renault", "12");
+console.log(renault12);
+console.log(renault21);
+console.log(renault21.acelerar());

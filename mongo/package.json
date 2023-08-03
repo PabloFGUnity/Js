@@ -1,0 +1,11 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "description": "prueba mongo",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^7.3.0",
+    "validator": "^13.9.0"
+  }
+}
