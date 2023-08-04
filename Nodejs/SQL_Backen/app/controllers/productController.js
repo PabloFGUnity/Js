@@ -141,7 +141,6 @@ productController.addProduct = async (req, res) => {
 
 productController.getProduct = async (req, res) => {
     const {id} = req.params
-    console.log("hola");
 
     if(!id) return res.status(400).send("Error al recibir el id")
 
