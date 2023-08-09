@@ -9,7 +9,7 @@ import {useLogearseContext} from "../../Contexts/UiLogearse";
 
 
 
-export default function Homeview({characters,total,pages,onChange}) {
+export default function   Homeview({characters,total,pages,onChange}) {
   // const { toggleUiMode } = useUiModeContext();
 
       const {logout} = useLogearseContext();

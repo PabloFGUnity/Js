@@ -8,7 +8,7 @@ function Home() {
   const [characters, setCharacters] = useState(null);
 
   const [page, setPage] =useState(1);
-  const handleChange = (event, value) => {
+  const handleChange = (value) => {
     setPage(value);
   };
 
